@@ -7,7 +7,7 @@ import io.dropwizard.auth.AuthenticationException;
 import io.dropwizard.auth.Authenticator;
 import io.dropwizard.auth.basic.BasicCredentials;
 import io.dropwizard.models.User;
-import io.dropwizard.persistence.UserDAO;
+import io.dropwizard.persistence.DAO.UserDAO;
 
 
 public class AuthService implements Authenticator<BasicCredentials, User> {

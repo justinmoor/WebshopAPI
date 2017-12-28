@@ -1,7 +1,7 @@
 package io.dropwizard.services;
 
 import io.dropwizard.models.Product;
-import io.dropwizard.persistence.ProductDAO;
+import io.dropwizard.persistence.DAO.ProductDAO;
 
 import java.util.Collection;
 

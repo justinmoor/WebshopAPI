@@ -1,7 +1,7 @@
 package io.dropwizard.services;
 
 import io.dropwizard.models.User;
-import io.dropwizard.persistence.UserDAO;
+import io.dropwizard.persistence.DAO.UserDAO;
 
 import java.util.Collection;
 

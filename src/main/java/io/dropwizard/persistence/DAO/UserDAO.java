@@ -1,4 +1,4 @@
-package io.dropwizard.persistence;
+package io.dropwizard.persistence.DAO;
 
 import io.dropwizard.models.User;
 
@@ -10,7 +10,7 @@ public class UserDAO {
     private List<User> users;
     User user1;
     public UserDAO() {
-        user1 = new User("Justin", "Moor", "justin-804@hotmail.com", "abc123");
+        user1 = new User("Justin", "Moor", "a", "a");
         users = new ArrayList<>();
         users.add(user1);
     }
@@ -19,10 +19,11 @@ public class UserDAO {
         users.add(user);
     }
 
-    public List<User> getAll()
-    {
+    public List<User> getAll(){
         return users;
     }
 
-
+    public User getByEmailaddress(String username) {
+        return user1;
+    }
 }
