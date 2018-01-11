@@ -2,13 +2,16 @@ package io.dropwizard.models;
 
 public class Product {
 
+    private int id;
     private String naam;
     private String beschrijving;
     private double prijs;
     private int aantal;
     private String path;
 
-    public Product(String naam, String beschrijving, double prijs, int aantal, String path){
+
+    public Product(int id, String naam, String beschrijving, double prijs, int aantal, String path){
+        this.id = id;
         this.naam = naam;
         this.beschrijving = beschrijving;
         this.prijs = prijs;
@@ -56,7 +59,13 @@ public class Product {
         return aantal;
     }
 
+    public int getId(){
+        return this.id;
+    }
+
     public void setAantal(int aantal) {
         this.aantal = aantal;
     }
+
+
 }

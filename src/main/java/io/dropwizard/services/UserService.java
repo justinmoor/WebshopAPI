@@ -4,6 +4,7 @@ import io.dropwizard.models.User;
 import io.dropwizard.persistence.DAO.UserDAO;
 
 import java.util.Collection;
+import java.util.List;
 
 public class UserService {
     private UserDAO dao = new UserDAO();
@@ -20,7 +21,7 @@ public class UserService {
         return dao.getByEmailaddress(email);
     }
 
-    public Collection<User> getAll()
+    public List<User> getAll()
     {
         return dao.getAll();
     }

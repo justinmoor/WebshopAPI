@@ -12,6 +12,7 @@ import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.Collection;
+import java.util.List;
 
 @Singleton
 @Path("/user")
@@ -40,5 +41,12 @@ public class UserResource {
     @JsonView(View.Public.class)
     public void registreer(@Valid User user){
         service.add(user);
+    }
+
+    @GET
+    @Path("/getall")
+    @JsonView(View.Public.class)
+    public List<User> getAll(){
+        return this.service.getAll();
     }
 }

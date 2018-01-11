@@ -9,6 +9,8 @@ import java.security.Principal;
 
 public class User implements Principal{
 
+    private int id;
+
     @JsonView(View.Public.class)
     private String voornaam;
 
@@ -21,11 +23,15 @@ public class User implements Principal{
     @JsonView(View.Public.class)
     private String wachtwoord;
 
-    public User(String voornaam, String achternaam, String email, String wachtwoord){
+    private boolean admin;
+
+    public User(int id, String voornaam, String achternaam, String email, String wachtwoord, boolean admin){
+        this.id = id;
         this.voornaam = voornaam;
         this.achternaam = achternaam;
         this.email = email;
         this.wachtwoord = wachtwoord;
+        this.admin = admin;
     }
 
     public User(){
@@ -64,8 +70,20 @@ public class User implements Principal{
         this.wachtwoord = wachtwoord;
     }
 
+    public int getId(){
+       return this.id;
+    }
+
     @Override
     public String getName() {
         return null;
+    }
+
+    public boolean getAdmin(){
+        return this.admin;
+    }
+
+    public void setAdmin(boolean admin){
+        this.admin = admin;
     }
 }
