@@ -1,13 +1,26 @@
-# Webshop API
+# Webshop API IPRWC
+---------------------------------------
 
-How to start the Webshop API application
----
+Backend API: https://github.com/justinmoor/WebshopAPI
+Frontend: https://github.com/justinmoor/WebshopFrontEnd
 
-1. Run `mvn clean install` to build your application
-1. Start application with `java -jar target/ipsen3apilol-1.0-SNAPSHOT.jar server config.yml`
-1. To check that your application is running enter url `http://localhost:8080`
+Werkende links, vanaf de homepagina.
+---------------------------------------
+http://217.122.153.143:8080/
+http://217.122.153.143:8080/producten
+http://217.122.153.143:8080/login
+http://217.122.153.143:8080/registreren
+http://217.122.153.143:8080/winkelwagen
+http://217.122.153.143:8080/inventaris (Alleen beschikbaar voor administrators)
+http://217.122.153.143:8080/toevoegen (Alleen beschikbaar voor administrators)
+http://217.122.153.143:8080/klanten (Alleen beschikbaar voor administrators)
 
-Health Check
----
+Inloggevens
+---------------------------------------
+Administrator:
+Email/username: admin@live.nl
+Wachtwoord: admin1
 
-To see your applications health enter url `http://localhost:8081/healthcheck`
+Klant:
+Email/username: klant@live.nl
+Wachtwoord: klant1
